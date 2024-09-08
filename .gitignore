@@ -1,2 +1,3 @@
 contract-indexer/api_key.py
 usdt_indexer.pem
+contract-indexer/__pycache__
