@@ -5,6 +5,9 @@ from api_key import API_KEY
 import json
 import time
 
+# Start Prometheus metrics server
+start_http_server(8000)
+
 # Connect to Ethereum Mainnet using Alchemy API
 eth_url = f'https://eth-mainnet.g.alchemy.com/v2/{API_KEY}'
 
@@ -33,9 +36,6 @@ tx_per_second = Gauge('tx_per_second', 'Number of transactions per second')
 token_transferred = Gauge('token_transferred_per_second', 'Amount of tokens transferred per second')
 approvals_per_second = Gauge('approvals_per_second', 'Number of approvals per second')
 approval_amount_metric = Gauge('approval_amount_metric', 'Total amount of tokens approved')
-
-# Start Prometheus metrics server
-start_http_server(8000)
 
 def handle_event(event):
     if event.event == 'Transfer':
