@@ -46,7 +46,7 @@ resource "aws_instance" "indexer" {
     connection {
       type        = "ssh"
       user        = "ec2-user"
-      private_key = file("E:/projects/automata-devops-assignment/contract-indexer/usdt_indexer.pem")
+      private_key = file("custom-file-path")
       host        = self.public_ip
     }
 

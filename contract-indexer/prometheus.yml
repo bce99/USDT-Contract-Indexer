@@ -5,10 +5,10 @@ global:
   # scrape_timeout is set to the global default (10s).
 
 remote_write:
-  - url: https://prometheus-prod-37-prod-ap-southeast-1.grafana.net/api/prom/push
+  - url: # Add provided url
     basic_auth:
-      username: # Added personal username
-      password: # Added personal password
+      username: # Add personal username
+      password: # Adde personal password
 
 
 
@@ -34,13 +34,13 @@ scrape_configs:
     # scheme defaults to 'http'.
 
     static_configs:
-      - targets: ["172.17.0.2:9200"]
+      - targets: ["<indexer container IP>:9200"]
   - job_name: "node-exporter"
 
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
 
     static_configs:
-      - targets: ["172.17.0.3:9100"]
+      - targets: ["<node-exporter container IP>:9100"]
 
 
