@@ -21,8 +21,15 @@ resource "aws_security_group" "sg" {
   }
 
   ingress {
-    from_port   = 8080
-    to_port     = 8080
+    from_port   = 9200
+    to_port     = 9200
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 9100
+    to_port     = 9100
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -49,7 +56,8 @@ resource "aws_instance" "indexer" {
       "sudo service docker start",
       "sudo usermod -a -G docker ec2-user",
       "docker pull biance1020/my-indexer:latest",
-      "docker run -d -p 8080:80 biance1020/my-indexer:latest"
+      "docker run -d -p 9200:9200 biance1020/my-indexer:latest",
+      "docker run -d --name node-exporter -p 9100:9100 prom/node-exporter:latest"
     ]
   }
 
