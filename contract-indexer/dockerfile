@@ -11,7 +11,7 @@ COPY . /contract-indexer
 RUN pip install --no-cache-dir web3 prometheus-client
 
 # Expose the port that the Prometheus server is running on
-EXPOSE 8000
+EXPOSE 9200 
 
 # Run the indexer script
 CMD ["python", "indexer.py"]
