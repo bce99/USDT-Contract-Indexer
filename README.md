@@ -4,7 +4,7 @@
 
 ## Overview
 
-This project involves developing and deploying an ERC20 smart contract indexer application on an AWS EC2 instance that integrates with Prometheus for metrics collection and Grafana for visualization. The application tracks USDT transactions and other relevant data.
+This project involves developing and deploying an ERC20 smart contract indexer application on an AWS EC2 instance that integrates with Prometheus for metrics collection and Grafana for visualization. The application tracks USDT transactions and other relevant data. To verify if certain step is fulfill, you can refer to screenshots in ```/contract-indexer/screenshots```.
 
 ## Table of Contents
 
@@ -95,15 +95,33 @@ This project involves developing and deploying an ERC20 smart contract indexer a
 
 - **Access Prometheus:**
   
-  Open your browser and go to `http://<EC2-PUBLIC-IP>:9090`.
+  Open your browser and go to `http://<EC2-PUBLIC-IP>:9090/targets?search=`.
+
+  You can expect something like this:
+  
+  ![http://<EC2-PUBLIC-IP>:9090/targets?search=](/contract-indexer/screenshots/9090-targets.png)
 
 - **Access all metrics on node-exporter:**
   
   Open your browser and go to `http://<EC2-PUBLIC-IP>:9100`.
 
+  You can expect something like this:
+  
+  ![http://<EC2-PUBLIC-IP>:9100](/contract-indexer/screenshots/9100.png)
+
 - **Access indexer output:**
   
   Open your browser and go to `http://<EC2-PUBLIC-IP>:9200`.
+
+  You can expect something like this:
+  
+  ![http://<EC2-PUBLIC-IP>:9200](/contract-indexer/screenshots/9200.png)
+
+- **Final Dashboard:**
+  
+  You should see something like this!
+
+  ![final-dashboard](/contract-indexer/screenshots/grafana-dashboard-token_transferred_per_second.png)
 
 ## Metrics
 
