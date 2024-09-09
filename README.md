@@ -1,6 +1,4 @@
-# automata-devops-assignment
-
-# Project Title
+# USDT-Contract-Indexer
 
 ## Overview
 
