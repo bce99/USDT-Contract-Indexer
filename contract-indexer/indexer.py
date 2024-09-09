@@ -6,7 +6,7 @@ import json
 import time
 
 # Start Prometheus metrics server
-start_http_server(8000)
+start_http_server(9200)
 
 # Connect to Ethereum Mainnet using Alchemy API
 eth_url = f'https://eth-mainnet.g.alchemy.com/v2/{API_KEY}'
