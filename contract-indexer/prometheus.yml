@@ -1,14 +1,14 @@
 # my global config
 global:
-  scrape_interval: 10s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
-  evaluation_interval: 10s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  scrape_interval: 10s # Set the scrape interval to every 10 seconds. Default is every 1 minute.
+  evaluation_interval: 10s # Evaluate rules every 10 seconds. The default is every 1 minute.
   # scrape_timeout is set to the global default (10s).
 
 remote_write:
   - url: https://prometheus-prod-37-prod-ap-southeast-1.grafana.net/api/prom/push
     basic_auth:
-      username: 1780545
-      password: glc_eyJvIjoiMTIxNjI1MCIsIm4iOiJzdGFjay0xMDMxNzc5LWludGVncmF0aW9uLXByb20tdG9rZW4iLCJrIjoiMzNjdzVBMjdLTUY5Q2RjNzVNNEdJczd4IiwibSI6eyJyIjoicHJvZC1hcC1zb3V0aGVhc3QtMSJ9fQ==
+      username: # Added personal username
+      password: # Added personal password
 
 
 
